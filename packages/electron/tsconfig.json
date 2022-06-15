@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"jsx": "react",
+		"esModuleInterop": true,
+		"module": "CommonJS",
+		"target": "es6"
+	},
+	"include": ["src"],
+	"exclude": [".vscode"]
+}

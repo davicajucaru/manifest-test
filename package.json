@@ -1,0 +1,20 @@
+{
+  "name": "gatest",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna run dev --scope=@gatest/test --stream",
+    "build": "lerna run build --scope=@gatest/test --stream",
+    "test": "lerna run test --scope=@gatest/test --stream",
+    "build-electron": "yarn build --scope=@hyperspace/electron",
+		"build-electron-win": "lerna run build-windows --stream --scope=@gatest/electron",
+		"build-electron-mac": "lerna run build-mac --stream --scope=@gatest/electron",
+    "rebuild": "npm rebuild --runtime=electron --target=16.0.7 --disturl=https://atom.io/download/atom-shell"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
